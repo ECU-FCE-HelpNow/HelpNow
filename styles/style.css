@@ -4,7 +4,7 @@ body {
 
 .parent {
     display: grid;
-    grid-template-columns: 220px 700px repeat(3, 1fr);
+    grid-template-columns: 220px 1280px repeat(3, 1fr);
     grid-template-rows: 100px repeat(2, 1fr) 100px 1fr;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
