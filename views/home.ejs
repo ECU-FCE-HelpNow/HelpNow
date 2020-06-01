@@ -1,14 +1,72 @@
 <% include header %>
-<div>
+<div class="parent">
+    <div class="boxIt">
 
-  <h3>Welcome to Help Now.</h3>
-  <p>At Help Now, we aspire to provide interesting, engaging and most importantly cost effective activities
-      and clubs, keyed towards the elderly, disabled, and disadvantaged communities. We understand that
-      everyone has the right to feel independent, and live out their best lives.</p>
+        <h3>Welcome to Help Now.</h3>
+        <p>At Help Now, we aspire to provide interesting, engaging and most importantly cost effective activities and
+            clubs, keyed towards the elderly, disabled, and disadvantaged communities. We understand that everyone has
+            the right to feel independent,
+            and live out their best lives.</p>
+        <br>
+        <h3>What do we offer?</h3>
+        <p>We offer fun and innovative clubs and activities including Lawn Bowls,, Archery, Floral Arrangements, Chess,
+            and Antique Books. Membership to any of these clubs is a yearly fee of $5, payable via Credit Card, PayPal
+            or In Person at our amazing
+            facility located at <strong>123 Boring Road, SleepyTime WA
+                6000.</strong></p>
+    </div>
+    <%- include('contentBox', {name: events}); %>
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <img src="/images/books.png" class="carousel__photo">
+        </div>
 
-  <h3>What do we offer?</h3>
-  <p>We offer fun and innovative clubs and activities including Lawn Bowls,, Archery, Floral Arrangements,
-      Chess, and Antique Books. Membership to any of these clubs is a yearly fee of $5, payable via Credit
-      Card, PayPal or In Person at our amazing facility located at <strong>123 Boring Road, SleepyTime WA 6000.</strong></p>
+        <div class="mySlides fade">
+            <img src="/images/arrows.png" class="carousel__photo">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="/images/balls.png" class="carousel__photo">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="/images/chess.png" class="carousel__photo">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="/images/flowers.png" class="carousel__photo">
+        </div>
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <br>
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+    <%- include contentBoxBot %>
+
+    <%- include('contentBox', {name: clubs}); %>
+    <div class="clubGrid">
+
+    <% for( let i = 0; i < 5; i++ ) { %>
+    <%- include('clubAvatars', {photo: clubsJoin[i][0], clubLinkName: clubsJoin[i][1]}); %> 
+    <% } %>
+    
+    </div>
+
+    <%- include contentBoxBot %>
+
+    <%- include('contentBox', {name: deals}); %>
+    <%- include contentBoxBot %>
+
 </div>
 <% include footer %>
