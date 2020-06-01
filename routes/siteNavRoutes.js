@@ -1,9 +1,23 @@
 var express = require('express');
 var router = express.Router();
 
+var clubsInfo = [
+    ['/images/arrows.png', 'Archery Club'],
+    ['/images/balls.png', 'Lawn Bowls Club'],
+    ['/images/chess.png', 'Chess Club'],
+    ['/images/flowers.png', 'Floral Club'],
+    ['/images/books2.png', 'Book Club'],
+];
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('home', { title: 'Help Now' });
+    res.render('home', {
+        title:  'Help Now',
+        events: 'Events Coming Up',
+        clubs:  'Check Out these Club\'s Today',
+        deals:  'Have a look at these great deals',
+        clubsJoin: clubsInfo
+    });
 });
 
 /* GET About page. */
