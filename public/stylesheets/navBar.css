@@ -1,0 +1,48 @@
+header{
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 0px 5px 5px rgba(0,0,0,0.2);
+    padding: 20px 50px 20px;
+    margin-bottom: 20px; 
+  }
+  
+  .navLinks{
+    list-style: none;  
+  }
+  
+  .navLinks li {
+    display: inline-block;
+    padding: 70px 10px 10px;
+  }
+  
+  .navLinks li a:hover{
+    color: #707070;
+  }
+  
+  .logo{
+    cursor: pointer;
+  }
+  
+  a {
+    color: #000000;
+  }
+  
+  .searchButtonImg{
+    background: url(/images/searchIcon.png) no-repeat;
+    background-size: 15px;
+    background-position: center;
+    height: 34px;
+    width:54px;
+    border-radius: 5px;
+    border-bottom: 1px solid #707070;
+    box-shadow: 0px 5px 5px rgba(0,0,0,0.2)  
+  }
+  
+  .searchTextBox{
+    width: 200px;
+    height: 33px;
+    border: 1px solid #707070;
+    box-shadow: 0px 5px 5px rgba(0,0,0,0.2) 
+  }

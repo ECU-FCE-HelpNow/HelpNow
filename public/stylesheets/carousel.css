@@ -1,0 +1,54 @@
+
+/* Wrapper class for our carousel */
+.carousel-wrapper {
+    overflow: hidden;
+    width: 90%;
+  }
+
+  /* include our elements toatl width and height */
+  .carousel-wrapper * {
+    box-sizing: border-box;
+  }
+
+  /* use transform to move carousel */
+  .carousel {
+    transform-style: preserve-3d;
+  }
+
+  /* default hide everything unitil script inititiates*/
+  .carousel__photo {
+    opacity: 0;
+    position: absolute;
+    top:0;
+    width: 100%;
+    margin: auto;
+    padding: 1rem 4rem;
+    z-index: 100;
+    transition: transform .5s, opacity .5s, z-index .5s;
+  }
+
+  /* takes time to load so show initial one, 
+  make it relative and bring to the front
+  styles will appy to the activer item when controlled */
+.carousel__photo.initial,
+.carousel__photo.active {
+  opacity: 1;
+  position: relative;
+  z-index: 900;
+}
+
+/* js to dynamically set postions prev and next
+and use index to put these on top of any other items
+but under active  */
+.carousel__photo.prev,
+.carousel__photo.next {
+  z-index: 800;
+}
+
+.carousel__photo.prev {
+  transform: translateX(-100%); /* Move 'prev' item to the left */
+}
+
+.carousel__photo.next {
+  transform: translateX(100%); /* Move 'next' item to the right */
+}
