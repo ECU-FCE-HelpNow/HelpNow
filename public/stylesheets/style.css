@@ -45,6 +45,13 @@ body {
     margin: 0px 30% 0px;
     grid-gap: 1em;
 }
+.parentSearch {
+    display: grid;
+    grid-auto-flow: auto;
+    margin: 0px 10% 0px;
+    grid-gap: 1em;
+    text-align: center;
+}
 
 .boxIt {
     border: 2px gray solid;
@@ -105,4 +112,17 @@ h1 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
+  }
+
+  .responsive {
+    width: 100%;
+    height: auto;
+  }
+
+  .item:link{
+      color: blue;
+  }
+
+  .item:hover{
+      color: black;
   }

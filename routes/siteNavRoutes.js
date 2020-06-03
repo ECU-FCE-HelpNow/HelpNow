@@ -10,13 +10,23 @@ var clubsInfo = [
 ];
 
 var fakeDBObj = [
-    {name: 'Item Name', description: 'Description of item'},
-    {name: 'Item Name', description: 'Description of item'},
-    {name: 'Item Name', description: 'Description of item'},
-    {name: 'Item Name', description: 'Description of item'},
-    {name: 'Item Name', description: 'Description of item'},
-    {name: 'Item Name', description: 'Description of item'}
+    {name: 'Item Name', description: 'Description of item', price: "$10"},
+    {name: 'Item Name', description: 'Description of item', price: "$10"},
+    {name: 'Item Name', description: 'Description of item', price: "$10"},
+    {name: 'Item Name', description: 'Description of item', price: "$10"},
+    {name: 'Item Name', description: 'Description of item', price: "$10"},
+    {name: 'Item Name', description: 'Description of item', price: "$10"}
 ];
+
+function searchDB (arr, target) {
+    var obj = [];
+    arr.forEach(currentItem => {
+        if (currentItem.name === target) {
+            obj.push(currentItem);
+        }        
+    });
+    return obj;
+};
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -69,15 +79,16 @@ router.get('/auth/rego', function(req, res, next) {
     res.render('login/registration', { title: 'Events' });
 });
 
-/* GET home page. */
+/* Post search results page. */
 router.post('/search', function(req, res, next) {
-
     var searchValue=req.body.search;
+    var results = searchDB(fakeDBObj, searchValue);
+    
     res.render('search', { 
         title:'Search',
         search: searchValue,
-        fakeDBObj
-    })
+        searchResults: results
+    });
 });
 
 module.exports = router;
