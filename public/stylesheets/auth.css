@@ -1,53 +1,53 @@
-.logBox{
+.logBox {
     border: 2px gray solid;
     padding: 20px;
     margin: 0px 10% 10px;
     background-color: #ffffff;
 }
 
-.logForm{
+.logForm {
     display: grid;
     grid-template-columns: 30% 50%;
     grid-gap: 10px;
     padding-bottom: 10px;
 }
 
-.logForm2{
+.logForm2 {
     display: grid;
     grid-template-columns: 50% 15%;
     grid-gap: 20px;
     padding-bottom: 10px;
 }
 
-.logForm3{
+.logForm3 {
     display: grid;
     grid-template-columns: 30% 15%;
     grid-gap: 10px;
     padding-bottom: 10px;
 }
 
-.memForm{
+.memForm {
     display: grid;
     grid-template-columns: 30% 30% 45%;
     grid-gap: 10px;
     padding-bottom: 10px;
 }
 
-.memForm2{
+.memForm2 {
     display: grid;
     grid-template-columns: 30% 30%;
     grid-gap: 10px;
     padding-bottom: 10px;
 }
 
-.memForm3{
+.memForm3 {
     display: grid;
     grid-template-columns: 30% 5% 45%;
     grid-gap: 10px;
     padding-bottom: 10px;
 }
 
-.memButtons{
+.memButtons {
     display: grid;
     grid-template-columns: 25% 25%;
     margin-left: 25%;
@@ -55,7 +55,7 @@
     padding-bottom: 10px;
 }
 
-.midRight{
+.midRight {
     text-align: right;
 }
 

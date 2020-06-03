@@ -91,5 +91,23 @@ router.post('/search', function(req, res, next) {
     });
 });
 
+/* Post search results page. */
+router.post('/', function(req, res, next) {
+    res.render('home', {
+        title: 'Help Now',
+        events: 'Events Coming Up',
+        clubs: 'Check Out these Club\'s Today',
+        deals: 'Have a look at these great deals',
+        clubsJoin: clubsInfo
+    });
+});
+
+/* Post search results page. */
+router.post('/payment', function(req, res, next) {
+    res.render('home', {
+        title: 'Help Now'
+    });
+});
+
 
 module.exports = router;
