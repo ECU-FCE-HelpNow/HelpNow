@@ -1,0 +1,68 @@
+.logBox{
+    border: 2px gray solid;
+    padding: 20px;
+    margin: 0px 10% 10px;
+    background-color: #ffffff;
+}
+
+.logForm{
+    display: grid;
+    grid-template-columns: 30% 50%;
+    grid-gap: 10px;
+    padding-bottom: 10px;
+}
+
+.logForm2{
+    display: grid;
+    grid-template-columns: 50% 15%;
+    grid-gap: 20px;
+    padding-bottom: 10px;
+}
+
+.logForm3{
+    display: grid;
+    grid-template-columns: 30% 15%;
+    grid-gap: 10px;
+    padding-bottom: 10px;
+}
+
+.memForm{
+    display: grid;
+    grid-template-columns: 30% 30% 45%;
+    grid-gap: 10px;
+    padding-bottom: 10px;
+}
+
+.memForm2{
+    display: grid;
+    grid-template-columns: 30% 30%;
+    grid-gap: 10px;
+    padding-bottom: 10px;
+}
+
+.memForm3{
+    display: grid;
+    grid-template-columns: 30% 5% 45%;
+    grid-gap: 10px;
+    padding-bottom: 10px;
+}
+
+.memButtons{
+    display: grid;
+    grid-template-columns: 25% 25%;
+    margin-left: 25%;
+    grid-gap: 10px;
+    padding-bottom: 10px;
+}
+
+.midRight{
+    text-align: right;
+}
+
+.boxIt2 {
+    border: 2px gray solid;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    background-color: #ffffff;
+}

@@ -1,5 +1,6 @@
 @import 'navBar.css';
 @import 'carousel.css';
+@import 'auth.css';
 * {
     box-sizing: border-box;
     margin: 0;
@@ -124,5 +125,8 @@ h1 {
   }
 
   .item:hover{
-      color: black;
+      color: #b0b0f8;
   }
+  .item:visited{
+    color: blue;
+}

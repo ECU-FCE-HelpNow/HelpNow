@@ -1,7 +1,26 @@
 <% include ../partials/header %>
 <div class="parent">
-    <div class="boxIt" style="text-align: center;">
-        <img src="/images/WorkInProgress.PNG" alt="Work In Progress" >
+    <div class="boxIt2">
+        <h1 style="text-align: left;">Forgot Password?</h1>
+        <p>Submit your Help Now account email address and we'll send you a link to reset your password.</p><br>
+        <div class="logBox">
+            <form action="/" method="post">
+                <div class="logForm">
+                    <label for="uname" class="midRight"><b>Username</b></label><input type="text"
+                        placeholder="Enter Username" name="uname" required>
+                    <label for="psw" class="midRight"><b>Password</b></label><input type="password"
+                        placeholder="Enter Password" name="psw" required>
+                </div>
+                <div class="logForm2">
+                    <label class="midRight"><input class="midRight" type="checkbox" checked="checked" name="remember">
+                        Remember me</label><button type="submit">Login</button>
+                </div>
+            </form>
+            <div style="text-align: center;">
+                <a href="/auth/forgot" class="item">Forgot Password?</a>
+            </div>
+        </div>
+        <p>Need an Account? <a href="/auth/rego" class="item"> Register Here</a></p>
     </div>
-</div> 
-<% include ../partials/footer %> 
+</div>
+<% include ../partials/footer %>

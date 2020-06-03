@@ -66,29 +66,30 @@ router.get('/events/eoi', function(req, res, next) {
 
 /* GET Login page. */
 router.get('/auth', function(req, res, next) {
-    res.render('login/authentication', { title: 'Contact Us' });
+    res.render('login/authentication', { title: 'Login' });
 });
 
 /* GET Forgot page. */
 router.get('/auth/forgot', function(req, res, next) {
-    res.render('login/forgot_password', { title: 'Events' });
+    res.render('login/forgot_password', { title: 'Forgot' });
 });
 
 /* GET new person rego page. */
 router.get('/auth/rego', function(req, res, next) {
-    res.render('login/registration', { title: 'Events' });
+    res.render('login/registration', { title: 'Registration' });
 });
 
 /* Post search results page. */
 router.post('/search', function(req, res, next) {
     var searchValue=req.body.search;
     var results = searchDB(fakeDBObj, searchValue);
-    
+
     res.render('search', { 
         title:'Search',
         search: searchValue,
         searchResults: results
     });
 });
+
 
 module.exports = router;
