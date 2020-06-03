@@ -1,7 +1,39 @@
 <% include ./partials/header %>
 <div class="parent">
-    <div class="boxIt" style="text-align: center;">
-        <img src="/images/WorkInProgress.PNG" alt="Work In Progress" >
+    <div class="boxIt">
+        <h1>Payment</h1>
+        <div class="row">
+            <div class="cardBox">
+                <form action="/" method="post">
+                    <label class="cardItem">Name on Card</label><br>
+                    <input type="text" name="name" id="" class="cardItem" placeholder="Your Name" required><br>
+                    <label class="cardItem">Card Number</label><br>
+                    <input type="text" name="name" id="" class="cardItem" placeholder="1111-2222-3333-4444"
+                        required><br>
+                    <label class="cardItem">Expiray Date</label>&nbsp;&nbsp;&nbsp;&nbsp;<label
+                        class="cardItem">CVC/CVV</label><br>
+                    <input type="text" name="name" id="" class="cardItem" style="width: 30px;" placeholder="MM"
+                        required>&nbsp;
+                    <input type="text" name="name" id="" class="cardItem" style="width: 40px;" placeholder="YYYY"
+                        required>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="text" name="name" id="" class="cardItem" style="width: 30px;" placeholder="123"
+                        required><br>
+                    <button type="submit" class="cardItem">Confirm Payment</button>
+                </form>
+            </div>
+            <div class="summBox">
+                <h1 style="padding: 10px;">Payment Summary</h1>
+                <hr class="sumLine">
+                <div class="itemCard">
+                    <label class="labelTotal">1 X Membership </label><label class="labelTotalAmount">$5.00</label><br>
+                    <br>
+                    <a href="" class="item labelTotal">Remove</a>
+                </div>
+                <hr class="sumLine">
+                <label class="labelTotal">Total:</label><label class="labelTotalAmount">$5.00</label>
+            </div>
+        </div>
     </div>
-</div> 
-<% include ./partials/footer %> 
+</div>
+<% include ./partials/footer %>

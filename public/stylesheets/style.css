@@ -1,5 +1,7 @@
 @import 'navBar.css';
 @import 'carousel.css';
+@import 'auth.css';
+@import 'payments.css';
 * {
     box-sizing: border-box;
     margin: 0;
@@ -25,18 +27,18 @@ body {
     width: 100%;
 }
 
-.hrLine, .footerLine{
+.hrLine, .footerLine {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.658);
     margin: 0 auto;
     margin-bottom: 10px;
 }
 
-.hrLine{
+.hrLine {
     width: 92%;
 }
 
-.footerLine{
-    width:60%
+.footerLine {
+    width: 60%
 }
 
 .parent {
@@ -44,6 +46,14 @@ body {
     grid-auto-flow: auto;
     margin: 0px 30% 0px;
     grid-gap: 1em;
+}
+
+.parentSearch {
+    display: grid;
+    grid-auto-flow: auto;
+    margin: 0px 10% 0px;
+    grid-gap: 1em;
+    text-align: center;
 }
 
 .boxIt {
@@ -58,13 +68,13 @@ h1 {
     text-align: center;
 }
 
-.avatars{
+.avatars {
     border-radius: 50%;
     height: 145px;
     width: 145px;
 }
 
-.clubGrid{
+.clubGrid {
     display: grid;
     grid-auto-flow: column;
     align-items: center;
@@ -72,8 +82,8 @@ h1 {
     text-align: center;
 }
 
-.avatars, .linkButton:link{
-    display:flex;
+.avatars, .linkButton:link {
+    display: flex;
     flex-wrap: wrap;
     margin-left: 10px;
     margin-right: 10px;
@@ -85,24 +95,41 @@ h1 {
     padding: 5px 5px;
     text-decoration: none;
     border: 2px solid #707077;
-    border-radius: 8px;    
+    border-radius: 8px;
     margin-top: 10px;
     width: auto;
     justify-content: center;
-  }
-  
-  .linkButton:hover, .linkButton:active {
+}
+
+.linkButton:hover, .linkButton:active {
     background-color: red;
-  }
+}
 
-  .error{
-      font-weight: 700;
-      color: red;
-      text-align: center;
-  }
+.error {
+    font-weight: 700;
+    color: red;
+    text-align: center;
+}
 
-  .form{
+.form {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
-  }
+}
+
+.responsive {
+    width: 100%;
+    height: auto;
+}
+
+.item:link {
+    color: blue;
+}
+
+.item:hover {
+    color: #b0b0f8;
+}
+
+.item:visited {
+    color: blue;
+}

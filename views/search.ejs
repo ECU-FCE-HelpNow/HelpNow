@@ -1,8 +1,36 @@
 <% include ./partials/header %>
 <div class="parent">
-    <div class="boxIt" style="text-align: center;">
-        <img src="/images/WorkInProgress.PNG" alt="Work In Progress" >
-        <h1><%=search  %></h1>
+    <div class="boxIt">
+        <h1>Search</h1>
+        <p>Use this page to search through events, merchandis and clubs</p><br>
+        <form method="POST" action="/search">
+            <input type="text" placeholder="Search.." name="search" style="width: 50%;">
+            <button type="submit" width=100px height=100px>Search</button><br><br>
+            <p>Options:</p><br>
+            <input type="checkbox" id="events" name="events" value="events">&nbsp;<label
+                for="events">Events</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="checkbox" id="merch" name="merch" value="merch">&nbsp;<label
+                for="merch">Shop</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="checkbox" id="clubs" name="clubs" value="clubs">&nbsp;<label
+                for="clubs">Clubs</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+        </form>
+
+        <h1>Search Results for: <%=search  %></h1>
+        <div class="parentSearch">
+            <div class="boxIt">
+                <%var results = searchResults %>
+                <% if (results.length > 0) { %>
+                    <% for( let index = 0; index < searchResults.length; index++ ) { %>
+                        <%- include('./partials/searchResults', {itemName: results[index].name, itemDescription: results[index].description}); %>
+                    <% } %>
+                <% } else {%>
+                    <h2 class="error">Could not find please try again</h2>
+                    <img src="/images/nothing.PNG" alt="cant find" class="responsive">
+                <% }  %>
+
+
+            </div>
+        </div>
     </div>
-</div> 
-<% include ./partials/footer %> 
+</div>
+<% include ./partials/footer %>
