@@ -1,43 +1,47 @@
-<% include header %> 
-<div class="div3">
+<% include ./partials/header %>
+<div class="parent">
+    <div class="boxIt">
+        <br>
+        <h3>Account Details</h3>
 
-    <h3>Account Details</h3>
-
-    <em>This page will automatically fill information for staff who are logged in, allowing them to update their
-        details. An example is below: </em>
+        <em>This page will automatically fill information for staff who are logged in, allowing them to update their
+            details. An example is below: </em>
 
         <p>
-    <table>
-        <tr>
-            <td>First Name:</td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td>Surname:</td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td>Membership Status:</td>
-            <td><em>Active / Inactive</em></td>
-            <td><input type="button" value="Pay For Membership"> <em> This will show up if membership needs to be paid </em></td>
-        </tr>
-        <tr>
-            <td>Address:</td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td>Phone Number:</td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td>Date of Birth:</td>
-            <td><input type="date"></td>
-        </tr>
-        <tr>
-            <td>Email Address:</td>
-            <td><input type="email"></td>
-        </tr>
-    </table>
-</p>
+        <table>
+            <tr>
+                <td>First Name:</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Surname:</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Membership Status:</td>
+                <td><em>Active / Inactive</em></td>
+                <td><input type="button" value="Pay For Membership"> <em> This will show up if membership needs to be
+                        paid </em></td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Phone Number:</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Date of Birth:</td>
+                <td><input type="date"></td>
+            </tr>
+            <tr>
+                <td>Email Address:</td>
+                <td><input type="email"></td>
+            </tr>
+        </table>
+        </p>
+        <br>
+    </div>
 </div>
-<% include footer %> 
+<% include ./partials/footer %>

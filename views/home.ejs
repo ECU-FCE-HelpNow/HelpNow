@@ -1,4 +1,4 @@
-<% include header %>
+<% include ./partials/header %>
 <div class="parent">
     <div class="boxIt">
 
@@ -15,7 +15,7 @@
             facility located at <strong>123 Boring Road, SleepyTime WA
                 6000.</strong></p>
     </div>
-    <%- include('contentBox', {name: events}); %>
+    <%- include('./partials/contentBox', {name: events}); %>
     <!-- Slideshow container -->
     <div class="slideshow-container">
         <!-- Full-width images with number and caption text -->
@@ -52,21 +52,22 @@
         <span class="dot" onclick="currentSlide(4)"></span>
         <span class="dot" onclick="currentSlide(5)"></span>
     </div>
-    <%- include contentBoxBot %>
+    <%- include ./partials/contentBoxBot %>
 
-    <%- include('contentBox', {name: clubs}); %>
+    <%- include('./partials/contentBox', {name: clubs}); %>
     <div class="clubGrid">
 
-    <% for( let i = 0; i < 5; i++ ) { %>
-    <%- include('clubAvatars', {photo: clubsJoin[i][0], clubLinkName: clubsJoin[i][1]}); %> 
-    <% } %>
-    
+        <% for( let i = 0; i < 5; i++ ) { %>
+        <%- include('./partials/clubAvatars', {photo: clubsJoin[i][0], clubLinkName: clubsJoin[i][1]}); %>
+        <% } %>
+
     </div>
 
-    <%- include contentBoxBot %>
+    <%- include ./partials/contentBoxBot %>
 
-    <%- include('contentBox', {name: deals}); %>
-    <%- include contentBoxBot %>
+    <%- include('./partials/contentBox', {name: deals}); %>
+    <%- include ./partials/itemCard  %> 
+    <%- include ./partials/contentBoxBot %>
 
 </div>
-<% include footer %>
+<% include ./partials/footer %>
