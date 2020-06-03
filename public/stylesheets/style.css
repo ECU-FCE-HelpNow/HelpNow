@@ -7,7 +7,7 @@
 }
 
 body {
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    font: 14px "Rockwell", "Lucida Grande", Helvetica, Arial, sans-serif;
     background-color: #CBCACA;
     position: relative;
     padding-bottom: 68px;
@@ -93,4 +93,16 @@ h1 {
   
   .linkButton:hover, .linkButton:active {
     background-color: red;
+  }
+
+  .error{
+      font-weight: 700;
+      color: red;
+      text-align: center;
+  }
+
+  .form{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
   }
