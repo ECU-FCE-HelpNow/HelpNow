@@ -104,8 +104,8 @@ router.post('/', function(req, res, next) {
 
 /* Post search results page. */
 router.post('/payment', function(req, res, next) {
-    res.render('home', {
-        title: 'Help Now'
+    res.render('payments', {
+        title: 'Payment'
     });
 });
 
