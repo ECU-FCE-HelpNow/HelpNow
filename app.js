@@ -28,6 +28,7 @@ app.use('/about', siteNav);
 app.use('/search', siteNav);
 app.use('/survey', siteNav);
 app.use('/contact', siteNav);
+app.use('/account', siteNav);
 app.use('/events', siteNav);
 app.use('/events/eoi', siteNav);
 app.use('/auth', siteNav);

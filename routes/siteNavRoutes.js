@@ -54,6 +54,11 @@ router.get('/contact', function(req, res, next) {
     res.render('contact', { title: 'Contact Us' });
 });
 
+/* GET Accounts page. */
+router.get('/account', function(req, res, next) {
+    res.render('account', { title: 'My Account' });
+});
+
 /* GET Event Rego page. */
 router.get('/events', function(req, res, next) {
     res.render('events', { title: 'Events' });
