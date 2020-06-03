@@ -1,0 +1,48 @@
+<% include ./partials/header %>
+<div class="parent">
+    <div class="boxIt">
+        <br>
+        <h1>Expression of Interest</h1>
+        <p>Use this page to express your interest in running a club specific event(s)</p>
+        <br>
+        <form action="">
+            <div class="form">
+                <label for="contact">Name of Contact person:</label><input type="text" id="contact" name="contact"><br>
+                <label for="memNum">Membership Number:</label><input type="text" id="memNum" name="memNum"><br>
+                <label for="club">Choose an Club:</label>
+                <select id="club" name="club">
+                    <option value="Book Club">Book Club</option>
+                    <option value="Archery Club">Archery Club</option>
+                    <option value="Lawn Bowls Club">Lawn Bowls Club</option>
+                    <option value="Chess Club">Chess Club</option>
+                    <option value="Floral Club">Floral Club</option>
+                </select><br>
+                <label for="nameEvent">Name of Event:</label><input type="text" id="nameEvent" name="nameEvent"><br>
+                <label for="dateEvent">Date of Event:</label><input type="date" id="dateEvent" name="dateEvent"><br>
+                <label for="timeEvent">Time of Event:</label><input type="time" id="timeEvent" name="timeEvent"><br>
+                <label for="capReq">Capactiy Requirement:</label><input type="text" id="capReq" name="capReq"
+                    placeholder="No. of attendee's"><br>
+                <br>
+            </div>
+            <label>Finacial Support Required:</label><br><br>
+            <input type="radio" id="yes" name="yes" value="yes"><label
+                for="yes">Yes</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" id="no" name="no" value="no"><label for="no">No</label><br><br>
+            <div class="form">
+                <label for="amount">Desired amount:</label><input type="text" id="amount" name="amount"><br>
+            </div>
+            <br>
+            <hr class="hrLine">
+            <label for="">Description of Event</label><br>
+            <textarea name="" id="" cols="100" rows="7"></textarea> <br>
+            <label for="">Benefits of Running the Event</label><br>
+            <textarea name="" id="" cols="100" rows="7"></textarea><br>
+            <div style="display: flex; align-items: center; justify-content: center;">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+
+    </div>
+</div>
+
+<% include ./partials/footer %>
