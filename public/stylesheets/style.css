@@ -2,6 +2,8 @@
 @import 'carousel.css';
 @import 'auth.css';
 @import 'payments.css';
+@import 'item.css';
+@import 'staff.css';
 * {
     box-sizing: border-box;
     margin: 0;
