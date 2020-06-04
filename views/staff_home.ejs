@@ -1,7 +1,75 @@
 <% include ./partials/header %>
-<div class="parent">
-    <div class="boxIt" style="text-align: center;">
-        <img src="/images/WorkInProgress.PNG" alt="Work In Progress" >
+<div class="parentStaff">
+    <div class="boxIt">
+        <div class="rowStaff">
+            <div class="overdue">
+                <h1>Overdue Memberships</h1>
+                <table>
+                    <% var j = 0; %>
+                    <% for( let i = 0; i < 4; i++ ) { %>
+                    <% j = Math.floor(Math.random() * Math.floor(4)); %>
+                    <%- include('./partials/memberRow', {color: cssColors[j], task: 'de-activate'}); %>
+                    <% } %>
+                </table>
+            </div>
+
+            <div class="renew">
+                <h1>Renew memberships</h1>
+                <table>
+                    <% var j = 0; %>
+                    <% for( let i = 0; i < 4; i++ ) { %>
+                    <% j = Math.floor(Math.random() * Math.floor(4)); %>
+                    <%- include('./partials/memberRow', {color: cssColors[j], task: 'activate'}); %>
+                    <% } %>
+                </table>
+            </div>
+            <div>
+            </div>
+        </div>
+        <a href="#" class="item logsText">View Logs</a>
+        <a href="#" class="item logsText">Create Renewal Report</a>
     </div>
-</div> 
-<% include ./partials/footer %> 
+
+    <div class="boxIt">
+        <div class="rowStaff">
+            <div class="events">
+                <h1 >Events</h1>
+                <table>
+                    <% var j = 0; %>
+                    <% for( let i = 0; i < 4; i++ ) { %>
+                    <% j = Math.floor(Math.random() * Math.floor(4)); %>
+                    <%- include('./partials/activities', {color: cssColors[j], name:"Event Name", today: now, act: "EN"}); %>
+                    <% } %>
+                </table>
+            </div>
+
+            <div class="comp">
+                <h1>Competitions</h1>
+                <table>
+                    <% var j = 0; %>
+                    <% for( let i = 0; i < 4; i++ ) { %>
+                    <% j = Math.floor(Math.random() * Math.floor(4)); %>
+                    <%- include('./partials/activities', {color: cssColors[j], name:"Competition", today: now, act: "CP"}); %>
+                    <% } %>
+                </table>
+            </div>
+
+            <div class="app">
+                <h1>Appointment</h1>
+                <table>
+                    <% var j = 0; %>
+                    <% for( let i = 0; i < 4; i++ ) { %>
+                    <% j = Math.floor(Math.random() * Math.floor(4)); %>
+                    <%- include('./partials/activities', {color: cssColors[j], name:"Apointment", today: now, act: "AP"}); %>
+                    <% } %>
+                </table>
+            </div>
+        </div>
+        <a href="#" class="item actLinks">Create Competition or Event</a>
+        <a href="#" class="item actLinks">Create a Schedule Report</a>
+        <a href="#" class="item actLinks">Create a Financial report</a>
+        <a href="#" class="item actLinks">Send Reminder</a>
+        <a href="#" class="item actLinks">Create Appointment</a>
+    </div>
+</div>
+<% include ./partials/footer %>

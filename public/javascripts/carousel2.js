@@ -8,9 +8,11 @@ setScreenSize();
 var lengthOfSlide;
 
 function addClone() {
-  var lastSlide = carouselContent.lastElementChild.cloneNode(true);
-  lastSlide.style.left = -lengthOfSlide + "px";
-  carouselContent.insertBefore(lastSlide, carouselContent.firstChild);
+  if (carouselContent != null) {
+    var lastSlide = carouselContent.lastElementChild.cloneNode(true);
+    lastSlide.style.left = -lengthOfSlide + "px";
+    carouselContent.insertBefore(lastSlide, carouselContent.firstChild);
+  } 
 }
 // addClone();
 
@@ -58,7 +60,7 @@ function getScreenSize() {
   // lengthOfSlide = ( carousel.offsetWidth  / carouselDisplaying );
   //another magic number :D
   lengthOfSlide = 1887 / carouselDisplaying;
-  console.log(carousel.offsetWidth);
+  //console.log(carousel.offsetWidth);
   var initialWidth = -lengthOfSlide;
   slidesArray.forEach(function (el) {
     el.style.width = lengthOfSlide + "px";
@@ -69,7 +71,9 @@ function getScreenSize() {
 }
 
 var rightNav = document.querySelector(".nav-right");
-rightNav.addEventListener("click", moveLeft);
+if (rightNav != null) {
+  rightNav.addEventListener("click", moveLeft);
+}
 
 var moving = true;
 function moveRight() {
@@ -92,7 +96,9 @@ function activateAgain() {
 }
 
 var leftNav = document.querySelector(".nav-left");
-leftNav.addEventListener("click", moveRight);
+if (leftNav != null) {
+  leftNav.addEventListener("click", moveRight);
+}
 
 // var moveLeftAgain = true;
 
@@ -116,7 +122,9 @@ function replaceToEnd() {
   firstSlide.removeEventListener("transitionend", replaceToEnd);
 }
 
-carouselContent.addEventListener("mousedown", seeMovement);
+if (carouselContent != null) {
+  carouselContent.addEventListener("mousedown", seeMovement);
+}
 
 var initialX;
 var initialPos;
