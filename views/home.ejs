@@ -66,7 +66,22 @@
     <%- include ./partials/contentBoxBot %>
 
     <%- include('./partials/contentBox', {name: deals}); %>
-    <%- include ./partials/itemCard  %> 
+    <div class="carousel">
+        <div class="carousel-content">
+            <% for( let i = 0; i < 4; i++ ) { %>
+            <%- include('./partials/itemCard', {itemName: "TShirts", price: "$10"}); %>
+            <% } %>
+            <% for( let i = 0; i < 4; i++ ) { %>
+            <%- include('./partials/itemCard', {itemName: "Games", price: "$10"}); %>
+            <% } %>
+            <% for( let i = 0; i < 4; i++ ) { %>
+            <%- include('./partials/itemCard', {itemName: "Books", price: "$10"}); %>
+            <% } %>
+        </div>
+        <a class="nav-left">&#10094;</a>
+        <a class="nav-right">&#10095;</a>
+    </div>
+
     <%- include ./partials/contentBoxBot %>
 
 </div>

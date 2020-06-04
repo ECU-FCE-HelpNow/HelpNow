@@ -1,0 +1,67 @@
+.itemsDeal{
+    display: block;
+    text-align: center;
+}
+
+.itemImg{
+    border-radius: 15px;    
+    margin-bottom: 10px;
+}
+
+.dealBox {
+    border: 2px gray solid;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.rowDeal{
+    display: flex;
+    justify-content: center;
+}
+
+.carousel {
+    position: relative;
+    width: 74%;
+    margin: auto;
+    padding: 10px;
+    height: 250px;
+  }
+  
+  .carousel-content {
+    position: relative;
+    overflow: hidden;
+    transition: width .4s;
+    height: 80%;
+  }
+  
+  .slide {
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    transition: left .4s cubic-bezier(.47,.13,.15,.89);
+  }
+
+  .nav-right, .nav-left{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 3px 0px 0px 3px;
+    user-select: none;
+}
+
+  .nav-right{
+    left: 100%;
+    border-radius: 0px 3px 3px 0px;
+  }
+
+  .nav-left{
+    right: 100%;
+  }
