@@ -16,6 +16,8 @@ header{
   .navLinks li {
     display: inline-block;
     padding: 70px 10px 10px;
+    font-size: 1.5em;
+    margin-left: 2em;
   }
   
   .navLinks li a:hover{
